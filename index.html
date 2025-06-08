@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Sederhana - 2 Foto</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; min-height: 100vh;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .photo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+      max-width: 90vw;
+      width: 400px;
+      background-color: #111;
+      padding-bottom: 10px;
+      /* Hapus max-height supaya foto tidak terpotong */
+      /* max-height: 80vh; */
+    }
+
+    .photo-section {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    /* Gaya umum foto pertama dan foto lain */
+    .photo-section img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    /* Styling khusus untuk foto kedua supaya tampil lebih besar dan tidak terpotong */
+    .foto-kedua {
+      object-fit: contain; /* Supaya seluruh gambar tampil */
+      max-height: 350px;   /* Sesuaikan tinggi sesuai kebutuhan */
+      border-radius: 10px 10px 0 0;
+    }
+
+    .text-overlay {
+      margin-top: 10px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-align: center;
+      user-select: none;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      padding: 0 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #eee;
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      width: 100%;
+      max-width: 600px;
+      margin-top: 30px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    footer a {
+      color: #00BFFF;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    footer a.facebook {
+      color: #3b5998;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="photo-container">
+    <div class="photo-section">
+      <img src="kelvin.jpg" alt="Foto Pertama" />
+      <div class="text-overlay">
+        HALO SELAMAT MALAM SEMUA NYA<br />
+        KAMI DARI TEAM CYBERS TXC MULTI
+      </div>
+    </div>
+    <div class="photo-section">
+      <img src="memek.jpg" alt="Foto Kedua" class="foto-kedua" />
+      <div class="text-overlay">
+        KAMI SIAP BERKOLABORASI<br />
+        BERSAMA TEAM LAINNYA
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <a href="https://t.me/username_telegram" target="_blank" rel="noopener">Telegram</a> |
+      <a href="https://facebook.com/username_facebook" target="_blank" rel="noopener" class="facebook">Facebook</a>
+    </div>
+    <div>
+      Owner: KelvinTXCybers TXC MULTI &copy; 2025
+    </div>
+  </footer>
+</body>
+</html>
